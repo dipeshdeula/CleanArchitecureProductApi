@@ -12,9 +12,9 @@ namespace ProductApi.Domain.Interfaces
     {
         Task<IEnumerable<ProductEntity>> GetAllProductsAsync();
         Task<ProductEntity> GetProductByIdAsync(int id);
-        Task AddProductAsync(ProductEntity product);
-        Task UpdateProductAsync(ProductEntity product);
-        Task DeleteProductAsync(int id);
+        Task<string> AddProductAsync(ProductEntity product);
+        Task<string> UpdateProductAsync(ProductEntity product);
+        Task<string> DeleteProductAsync(int id);
 
         Task UploadFileAsync(ImageDetails imageDetails);
 
